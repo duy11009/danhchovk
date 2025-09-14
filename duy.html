@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Gửi người ấy 💖</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffe6f0, #ffe6ff);
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #ff3399;
+            font-size: 3em;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #660033;
+            white-space: pre-line;
+        }
+
+        .heart {
+            font-size: 5em;
+            animation: pulse 1s infinite;
+            color: red;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #ff66a3;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 8px;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #cc3366;
+        }
+
+        .note {
+            margin-top: 40px;
+            font-size: 1.2em;
+            color: #99004d;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            white-space: pre-line;
+        }
+
+        .diem-tot {
+            display: none;
+            margin-top: 40px;
+            background-color: #fff0f8;
+            border: 2px dashed #ff99cc;
+            border-radius: 15px;
+            padding: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #660033;
+            font-size: 1.4em;
+            font-style: italic;
+        }
+
+        .toggle-link {
+            margin-top: 20px;
+            display: inline-block;
+            font-size: 1em;
+            color: #ff3399;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .toggle-link:hover {
+            color: #cc0066;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart">❤️</div>
+    <h1>Gửi tới người tớ thương nhất!</h1>
+    <p>
+        Nếu cậu là sao trời,  
+        tớ nguyện là bầu trời đêm 🌌  
+        
+        Mỗi lần nhìn thấy cậu cười,  
+        tim tớ lại... lỗi nhịp mất rồi 😳
+    </p>
+
+    <div class="note">
+        T iu m lắm, đừng bỏ t hay nạt t nữa, t sợ hehe 😢  
+        M thấy t hèn nhm T đối với người t iu là như v đó  
+        T rất hèn trong tình iu nên m giận hay gì thì nói t biết chứ đừng giấu t  
+        T đéo hiểu cái cc gì đâu 😵  
+        Nên nếu m có giận hay gì đó, cứ nói, t sẽ dỗ  
+        Buồn cũng nói, t sẽ an ủi m liền  
+        Nên yên con mẹ nó tâm đi nhá, người t iu. 💞
+    </div>
+
+    <a class="button" href="#">iu m nhiều lắm 💘</a> <br>
+    <span class="toggle-link" onclick="toggleDiemTot()">Xem điểm tốt của cậu 👉</span>
+
+    <!-- PHẦN TRANG PHỤ ĐƠN GIẢN -->
+    <div class="diem-tot" id="diemTotBox">
+        hiền dịu, giọng hay, biết an ủi người khác 😚
+    </div>
+
+    <!-- SCRIPT ẨN/HIỆN -->
+    <script>
+        function toggleDiemTot() {
+            const box = document.getElementById("diemTotBox");
+            box.style.display = (box.style.display === "none" || box.style.display === "") ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
